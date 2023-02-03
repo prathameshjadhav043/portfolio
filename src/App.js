@@ -1,16 +1,8 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
-import Navbar from './components/AppBar/Navbar';
+import Routers from './Routers/Routers';
 
 function App() {
-  return (
-    <>
-      <Navbar />
-    <div>
-        {/* <Button variant="contained">Hello World</Button> */}
-    </div>
-    </>
-  );
+  return <Routers />
 }
 
 export default App;
