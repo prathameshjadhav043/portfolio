@@ -1,0 +1,72 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+    /* Header offset */
+    text-align: center;
+}
+
+.hero__greeting {
+    font-size: 1.5rem;
+    color: var(--accent-primary);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.hero__name {
+    font-size: 5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #fff, #a5a5a5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -2px;
+}
+
+.hero__role {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+}
+
+.gradient-text {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+.hero__actions {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.btn-glass {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    border: 1px solid var(--glass-border);
+    padding: 12px 30px;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    transition: var(--transition-smooth);
+}
+
+.btn-glass:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+}
+
+@media (max-width: 768px) {
+    .hero__name {
+        font-size: 3.5rem;
+    }
+
+    .hero__role {
+        font-size: 1.5rem;
+    }
+}

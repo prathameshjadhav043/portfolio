@@ -1,0 +1,71 @@
+.contact {
+    padding: 8rem 0 2rem;
+}
+
+.contact__box {
+    padding: 4rem 2rem;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+}
+
+.contact__text {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    opacity: 0.8;
+}
+
+.contact__btn {
+    display: inline-block;
+    margin-bottom: 3rem;
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+}
+
+.contact__details {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.contact__item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.icon {
+    color: var(--accent-primary);
+}
+
+.social__links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social__links a {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    opacity: 0.6;
+    transition: var(--transition-smooth);
+}
+
+.social__links a:hover {
+    opacity: 1;
+    color: var(--accent-secondary);
+    transform: translateY(-5px);
+}
+
+.footer {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.4;
+}
