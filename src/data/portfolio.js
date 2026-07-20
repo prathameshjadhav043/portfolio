@@ -1,32 +1,33 @@
 export const portfolioData = {
   personalInfo: {
     name: "Prathamesh Jadhav",
-    role: "Software Engineer | React Native Developer",
+    role: "Software Engineer | React Native Developer | Mobile App Development",
     email: "prathameshjadhav043@gmail.com",
     phone: "(+91) 8983192002",
     location: "Gurugram, India",
-    linkedin: "https://linkedin.com/in/prathameshjadhav043", // Assumed from handle
-    github: "https://github.com/prathameshjadhav043", // Assumed from handle
-    resumeUrl: "https://drive.google.com/file/d/1jU_GU2DmOGOtMPWsoX42xDnyzVYBVuqJ/view?usp=sharing",
+    linkedin: "https://linkedin.com/in/prathameshjadhav07",
+    github: "https://github.com/prathameshjadhav043",
+    resumeUrl: "/portfolio/Prathamesh_Software_Engineer_5_3.pdf",
+    yearsExperience: "5.3 Years",
     about: [
       {
-        text: "Hi, I’m a Software Engineer with a fervor for mobile app development. For over 4 years, I've been immersing myself in an array of technologies and diligently staying updated with the industry's latest trends and innovations."
+        text: "Hi, I'm a Software Engineer with a fervor for mobile app development. With 5.3 years of experience, I've been immersing myself in an array of technologies and diligently staying updated with the industry's latest trends and innovations."
       },
       {
         title: "Mobile App Development",
-        text: "I've completed more than 5 projects for both iOS and Android platforms."
+        text: "I've completed more than 5 projects for both iOS and Android platforms, delivering scalable and user-focused mobile applications."
       },
       {
         title: "React Expertise",
-        text: "I'm highly skilled in React-Native with 2 years of experience, including React-Redux and Redux Toolkit. I'm equally comfortable with React Hooks and Class Components."
+        text: "I'm highly skilled in React Native with 4+ years of experience, including React-Redux and Redux Toolkit. I'm equally comfortable with React Hooks and Class Components."
       },
       {
         title: "Flutter Proficiency",
-        text: "Over the course of a year, I've become proficient in Flutter and have successfully completed 2 separate projects using it. I used MobX for effective state management."
+        text: "Proficient in Flutter with hands-on experience across multiple projects. I've used MobX for effective state management and delivered cross-platform solutions."
       },
       {
         title: "iOS Exploration",
-        text: "I'm currently deeply immersed in iOS development and actively working on a project focused on Apple devices."
+        text: "Experienced in iOS development with Swift, building native integrations and working on Apple device-focused projects."
       },
       {
         title: "Version Control",
@@ -71,23 +72,44 @@ export const portfolioData = {
   ],
   projects: [
     {
-      title: "Visit Health: Health Sector",
-      tech: "react native, ios",
+      title: "Visit Health User App",
+      tech: "react native, ios, android",
+      tag: "Live",
+      tagVariant: "live",
       description: [
-        "Claim Offline Reimbursement flow",
-        "Cashless Vision flow",
-        "Dental cashless flow"
+        "Employee health benefits platform for doctor consultations, lab tests, pharmacy, and wellness.",
+        "Claim Offline Reimbursement, Cashless Vision, and Dental cashless flows.",
+        "Currently live on both iOS and Android."
       ],
       links: {
-        appstore: "https://apps.apple.com/in/app/visit-health-benefits-platform/id1169969848"
+        appstore: "https://apps.apple.com/in/app/visit-health-benefits-platform/id1169969848",
+        playstore: "https://play.google.com/store/apps/details?id=com.getvisitapp.android"
       }
     },
     {
-      title: "KYM: Know Your Medicine - Health care",
+      title: "Visit Partner (Doctor App)",
       tech: "react native, ios, android",
+      tag: "Live",
+      tagVariant: "live",
       description: [
-        "Know Your Medicine (KYM) is a free app that helps athletes and sports enthusiasts stay safe from doping.",
-        "KYM checks medicines and their ingredients against the World Anti-Doping Agency (WADA) prohibited list"
+        "Doctor-facing app to connect with patients, manage appointments, and schedule follow-ups.",
+        "Video/voice consultations, patient messaging, and QR-based patient onboarding.",
+        "Currently live on both iOS and Android."
+      ],
+      links: {
+        appstore: "https://apps.apple.com/in/app/visit-partner/id1186831034",
+        playstore: "https://play.google.com/store/apps/details?id=com.getvisitapp.web.visitdoctorapp"
+      }
+    },
+    {
+      title: "KYM: Know Your Medicine",
+      tech: "react native, ios, android",
+      tag: "Live",
+      tagVariant: "live",
+      description: [
+        "Free app helping athletes stay safe from doping by checking medicines against the WADA prohibited list.",
+        "Scans medicines and ingredients for banned substances.",
+        "Currently live on both iOS and Android."
       ],
       links: {
         playstore: "https://play.google.com/store/apps/details?id=com.nada.doppingapp",
@@ -95,26 +117,44 @@ export const portfolioData = {
       }
     },
     {
-      title: "Klynex: Progressive Web Apps",
+      title: "Connectd for Schools",
       tech: "react native, ios, android",
+      tag: "Live",
+      tagVariant: "live",
       description: [
-        "Firebase push notification",
-        "Biometric and Face-lock login"
-      ]
+        "Wellbeing app for students, educators, and parents with personalized mental health resources.",
+        "Periodic wellbeing check-ins, curated content pathways, and school-customizable resources.",
+        "Currently live on both iOS and Android."
+      ],
+      links: {
+        playstore: "https://play.google.com/store/apps/details?id=com.connectdschools",
+        appstore: "https://apps.apple.com/us/app/connectd-for-schools/id1618127934"
+      }
     },
     {
-      title: "North Star: Ecommerce Application",
+      title: "Alautun Provider",
       tech: "react native, ios, android",
+      tag: "Legacy · US",
+      tagVariant: "legacy",
       description: [
-        "Theme changes as per client requirement",
-        "New features and maintenance"
-      ]
+        "Logistics app connecting shippers with carriers and owner-operators across the US and Canada.",
+        "Post freight jobs, find loads, and book shipments.",
+        "Part of the Alautun logistics suite (US-hosted; may be discontinued)."
+      ],
+      links: {
+        appstore: "https://apps.apple.com/in/app/alautun-provider/id1660930832",
+        playstore: "https://play.google.com/store/apps/details?id=com.alautun.providerapp"
+      }
     },
     {
-      title: "Alautun Shipper: Logistic Applications",
+      title: "Alautun Shipper",
       tech: "react native, ios, android",
+      tag: "Legacy · US",
+      tagVariant: "legacy",
       description: [
-        "Alauntun Shipper is a mobile app that lets you ship goods and packages to people in your area. It offers same-day, overnight, and standard shipping, including tracking, insurance, and delivery confirmation."
+        "Ship goods and packages with same-day, overnight, and standard shipping options.",
+        "Tracking, insurance, and delivery confirmation built in.",
+        "Part of the Alautun logistics suite (US-hosted; may be discontinued)."
       ],
       links: {
         appstore: "https://apps.apple.com/in/app/alautun-shipper/id1660931125",
@@ -122,15 +162,59 @@ export const portfolioData = {
       }
     },
     {
-      title: "Alautun Provider: Logistic Applications",
+      title: "Alautun Driver",
       tech: "react native, ios, android",
+      tag: "Legacy · US",
+      tagVariant: "legacy",
       description: [
-        "Alautun Provider is a mobile app that connects shippers with carriers and owner-operators. Shippers can use the app to post their freight jobs, and carriers can use the app to find and book loads"
-      ],
-      links: {
-        appstore: "https://apps.apple.com/in/app/alautun-provider/id1660930832",
-        playstore: "https://play.google.com/store/apps/details?id=com.alautun.providerapp"
-      }
+        "Driver app for the Alautun logistics platform to accept loads and manage deliveries.",
+        "Real-time trip tracking and freight job management for carriers.",
+        "US-hosted application; store listing may no longer be active."
+      ]
+    },
+    {
+      title: "Alautun Super App (Logistics)",
+      tech: "react native, ios, android",
+      tag: "Legacy · US",
+      tagVariant: "legacy",
+      description: [
+        "Unified logistics super app for shippers, brokers, and carriers across the US and Canada.",
+        "Post pickup locations, equipment types, and find broker/carrier matches.",
+        "US-hosted application; store listing may no longer be active."
+      ]
+    },
+    {
+      title: "FBINS Mobile App",
+      tech: "react native, ios, android",
+      tag: "Legacy · US",
+      tagVariant: "legacy",
+      description: [
+        "Retail e-commerce mobile application for Fortune Brands Innovations (FBIN).",
+        "Consumer-facing shopping experience for connected home and retail products.",
+        "US-hosted on US servers; application may have been discontinued."
+      ]
+    },
+    {
+      title: "North Star Mobile",
+      tech: "react native, ios, android",
+      tag: "Legacy · US",
+      tagVariant: "legacy",
+      description: [
+        "Home appliances e-commerce mobile application.",
+        "Theme customization per client requirements, new features, and ongoing maintenance.",
+        "US-hosted application; store listing may no longer be active."
+      ]
+    },
+    {
+      title: "Klynex: Progressive Web Apps",
+      tech: "react native, ios, android",
+      tag: "Legacy · US",
+      tagVariant: "legacy",
+      description: [
+        "Firebase push notifications and biometric/Face ID login.",
+        "Cross-platform progressive web app experience.",
+        "US-hosted application; may have been discontinued."
+      ]
     }
   ],
   skills: {

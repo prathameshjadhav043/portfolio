@@ -3,10 +3,17 @@ import Reveal from './Reveal';
 import './Experience.css';
 
 const Experience = () => {
+    const { yearsExperience } = portfolioData.personalInfo;
+
     return (
         <section id="experience" className="experience">
             <div className="container">
-                <h2 className="section-title">Professional Experience</h2>
+                <div className="experience__title-row">
+                    <h2 className="section-title">Professional Experience</h2>
+                    {yearsExperience && (
+                        <span className="experience__badge">{yearsExperience}</span>
+                    )}
+                </div>
                 <div className="experience__container">
                     {portfolioData.experience.map((exp, index) => (
                         <Reveal key={index} width="100%">

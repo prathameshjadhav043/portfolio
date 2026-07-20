@@ -1,0 +1,96 @@
+.liquid-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    background: var(--bg-dark);
+}
+
+.liquid-bg__orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.55;
+    will-change: transform;
+}
+
+.liquid-bg__orb--1 {
+    width: 55vw;
+    height: 55vw;
+    max-width: 680px;
+    max-height: 680px;
+    top: -12%;
+    left: -8%;
+    background: radial-gradient(circle, rgba(10, 132, 255, 0.55) 0%, rgba(10, 132, 255, 0) 70%);
+    animation: liquid-float-1 22s ease-in-out infinite;
+}
+
+.liquid-bg__orb--2 {
+    width: 45vw;
+    height: 45vw;
+    max-width: 560px;
+    max-height: 560px;
+    top: 18%;
+    right: -10%;
+    background: radial-gradient(circle, rgba(191, 90, 242, 0.5) 0%, rgba(191, 90, 242, 0) 70%);
+    animation: liquid-float-2 26s ease-in-out infinite;
+}
+
+.liquid-bg__orb--3 {
+    width: 40vw;
+    height: 40vw;
+    max-width: 500px;
+    max-height: 500px;
+    bottom: -8%;
+    left: 22%;
+    background: radial-gradient(circle, rgba(48, 209, 88, 0.35) 0%, rgba(48, 209, 88, 0) 70%);
+    animation: liquid-float-3 20s ease-in-out infinite;
+}
+
+.liquid-bg__orb--4 {
+    width: 35vw;
+    height: 35vw;
+    max-width: 420px;
+    max-height: 420px;
+    bottom: 12%;
+    right: 18%;
+    background: radial-gradient(circle, rgba(255, 159, 10, 0.28) 0%, rgba(255, 159, 10, 0) 70%);
+    animation: liquid-float-4 24s ease-in-out infinite;
+}
+
+.liquid-bg__mesh {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255, 255, 255, 0.06), transparent 60%),
+        radial-gradient(ellipse 60% 40% at 100% 50%, rgba(10, 132, 255, 0.04), transparent 50%);
+    pointer-events: none;
+}
+
+@keyframes liquid-float-1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(6%, 8%) scale(1.06); }
+    66% { transform: translate(-4%, 4%) scale(0.96); }
+}
+
+@keyframes liquid-float-2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(-8%, 6%) scale(1.08); }
+    66% { transform: translate(5%, -5%) scale(0.94); }
+}
+
+@keyframes liquid-float-3 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(10%, -8%) scale(1.1); }
+}
+
+@keyframes liquid-float-4 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-6%, -10%) scale(1.05); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .liquid-bg__orb {
+        animation: none;
+    }
+}

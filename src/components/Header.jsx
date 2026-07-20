@@ -15,22 +15,24 @@ const Header = () => {
 
     return (
         <motion.header
-            className={`header ${scrolled ? 'glass scrolled' : ''}`}
-            initial={{ y: -100 }}
-            animate={{ y: 0 }}
+            className="header"
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
         >
-            <div className="container header__container">
-                <a href="#" className="logo">PJ.</a>
-                <nav>
-                    <ul className="nav__links">
-                        {['About', 'Experience', 'Skills', 'Projects', 'Feedback', 'Contact'].map((item) => (
-                            <li key={item}>
-                                <a href={`#${item.toLowerCase()}`}>{item}</a>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
+            <div className={`header__pill glass-crystal ${scrolled ? 'header__pill--scrolled' : ''}`}>
+                <div className="header__container">
+                    <a href="#" className="logo">PJ.</a>
+                    <nav>
+                        <ul className="nav__links">
+                            {['About', 'Experience', 'Skills', 'Projects', 'Education', 'Feedback', 'Contact'].map((item) => (
+                                <li key={item}>
+                                    <a href={`#${item.toLowerCase()}`}>{item}</a>
+                                </li>
+                            ))}
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </motion.header>
     );

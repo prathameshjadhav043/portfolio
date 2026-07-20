@@ -1,58 +1,76 @@
 .skills {
     padding: 8rem 0;
+    position: relative;
 }
 
 .skills__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 1.5rem;
 }
 
 .skills__reveal {
     height: 100%;
 }
 
-.skills__reveal>div {
+.skills__reveal > div {
     height: 100%;
 }
 
 .skills__category {
     padding: 2.5rem;
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-xl);
     height: 100%;
     display: flex;
     flex-direction: column;
+    transition: var(--transition-spring);
+}
+
+.skills__category:hover {
+    transform: translateY(-6px);
 }
 
 .skills__title {
     text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 1.1rem;
+    letter-spacing: 0.12em;
+    font-size: 0.85rem;
     color: var(--accent-primary);
     margin-bottom: 2rem;
     text-align: center;
+    font-weight: 700;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--glass-border-subtle);
 }
 
 .skills__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.8rem;
-    margin-top: auto;
-    /* Push content if needed, though simpler is centered */
+    gap: 0.65rem;
     align-content: center;
     flex: 1;
 }
 
 .skill-pill {
-    padding: 10px 20px;
-    border-radius: 30px;
-    background: rgba(255, 255, 255, 0.05);
+    padding: 0.55rem 1.1rem;
+    border-radius: var(--radius-pill);
+    background: rgba(255, 255, 255, 0.06);
     border: 1px solid var(--glass-border);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 500;
     cursor: default;
     transition: var(--transition-smooth);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    letter-spacing: -0.01em;
+}
+
+.skill-pill:hover {
+    background: rgba(10, 132, 255, 0.12);
+    border-color: rgba(10, 132, 255, 0.3);
+    color: var(--accent-primary);
+    transform: scale(1.05);
 }
 
 @media (max-width: 768px) {

@@ -9,7 +9,7 @@ const Hero = () => {
         <section className="hero">
             <div className="container hero__container">
                 <motion.div
-                    className="hero__content"
+                    className="hero__content glass"
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}

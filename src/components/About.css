@@ -1,51 +1,64 @@
 .about {
     padding: 8rem 0;
+    position: relative;
 }
 
 .about__intro {
     max-width: 800px;
     margin: 0 auto 3rem;
-    padding: 2rem;
-    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    border-radius: var(--radius-xl);
     font-size: 1.1rem;
     text-align: center;
-    line-height: 1.8;
+    line-height: 1.85;
+    color: var(--text-secondary);
 }
 
 .about__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
     margin-bottom: 3rem;
 }
 
 .about__card {
     padding: 2rem;
-    border-radius: var(--radius-lg);
-    transition: var(--transition-smooth);
+    border-radius: var(--radius-xl);
+    transition: var(--transition-spring);
 }
 
 .about__card:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-8px) scale(1.01);
 }
 
 .about__icon {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--accent-primary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    background: rgba(10, 132, 255, 0.12);
+    border: 1px solid rgba(10, 132, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .about__card-title {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: white;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    letter-spacing: -0.02em;
 }
 
 .about__card-text {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     color: var(--text-secondary);
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 .about__cta-wrapper {
