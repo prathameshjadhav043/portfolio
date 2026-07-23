@@ -6,6 +6,15 @@ import './Skills.css';
 const Skills = () => {
     const { skills } = portfolioData;
 
+    const categoryLabels = {
+        frontend: 'Frontend',
+        plugins: 'Plugins',
+        languages: 'Languages',
+        devOps: 'DevOps & CI/CD',
+        analytics: 'Analytics & Monitoring',
+        tools: 'Tools & IDE',
+    };
+
     return (
         <section id="skills" className="skills">
             <div className="container">
@@ -14,7 +23,9 @@ const Skills = () => {
                     {Object.entries(skills).map(([category, items], index) => (
                         <Reveal key={index} width="100%" className="skills__reveal">
                             <div className="skills__category glass">
-                                <h3 className="skills__title">{category.replace(/([A-Z])/g, ' $1').trim()}</h3>
+                                <h3 className="skills__title">
+                                    {categoryLabels[category] || category.replace(/([A-Z])/g, ' $1').trim()}
+                                </h3>
                                 <div className="skills__list">
                                     {items.map((skill, i) => (
                                         <motion.span

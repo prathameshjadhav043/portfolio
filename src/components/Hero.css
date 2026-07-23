@@ -27,8 +27,8 @@
     margin-bottom: 1.25rem;
     padding: 0.4rem 1.1rem;
     border-radius: var(--radius-pill);
-    background: rgba(10, 132, 255, 0.12);
-    border: 1px solid rgba(10, 132, 255, 0.25);
+    background: rgba(10, 132, 255, 0.08);
+    border: 1px solid rgba(10, 132, 255, 0.18);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     letter-spacing: 0.02em;

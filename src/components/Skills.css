@@ -54,7 +54,7 @@
 .skill-pill {
     padding: 0.55rem 1.1rem;
     border-radius: var(--radius-pill);
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--glass-border);
     font-size: 0.85rem;
     font-weight: 500;
@@ -62,7 +62,7 @@
     transition: var(--transition-smooth);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
     letter-spacing: -0.01em;
 }
 

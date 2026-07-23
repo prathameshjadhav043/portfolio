@@ -41,8 +41,8 @@
     align-items: center;
     justify-content: center;
     border-radius: var(--radius-md);
-    background: rgba(10, 132, 255, 0.12);
-    border: 1px solid rgba(10, 132, 255, 0.2);
+    background: rgba(10, 132, 255, 0.08);
+    border: 1px solid rgba(10, 132, 255, 0.15);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 }
@@ -63,6 +63,10 @@
 
 .about__cta-wrapper {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 @media (max-width: 768px) {

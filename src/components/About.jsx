@@ -1,7 +1,7 @@
 import { portfolioData } from '../data/portfolio';
 import Reveal from './Reveal';
 import './About.css';
-import { FaMobileAlt, FaReact, FaAppStoreIos, FaCodeBranch, FaTasks, FaLaptopCode } from 'react-icons/fa';
+import { FaMobileAlt, FaReact, FaAppStoreIos, FaCodeBranch, FaTasks, FaLaptopCode, FaGithub, FaChartLine } from 'react-icons/fa';
 
 const getIcon = (title) => {
     switch (title) {
@@ -11,6 +11,8 @@ const getIcon = (title) => {
         case "iOS Exploration": return <FaAppStoreIos />;
         case "Version Control": return <FaCodeBranch />;
         case "Project Management": return <FaTasks />;
+        case "CI/CD & GitHub Actions": return <FaGithub />;
+        case "App Analytics & Monitoring": return <FaChartLine />;
         default: return null;
     }
 };
@@ -45,10 +47,18 @@ const About = () => {
                     <div className="about__cta-wrapper">
                         <a
                             href={portfolioData.personalInfo.resumeUrl}
-                            download="Prathamesh_Software_Engineer_Resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="btn btn-primary"
                         >
-                            Download Resume
+                            View Resume
+                        </a>
+                        <a
+                            href={portfolioData.personalInfo.resumeUrl}
+                            download="Prathamesh_Software_Engineer.pdf"
+                            className="btn btn-glass"
+                        >
+                            Download PDF
                         </a>
                     </div>
                 </Reveal>

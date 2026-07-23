@@ -4,10 +4,10 @@ export const portfolioData = {
     role: "Software Engineer | React Native Developer | Mobile App Development",
     email: "prathameshjadhav043@gmail.com",
     phone: "(+91) 8983192002",
-    location: "Gurugram, India",
+    location: "Noida, India",
     linkedin: "https://linkedin.com/in/prathameshjadhav07",
     github: "https://github.com/prathameshjadhav043",
-    resumeUrl: "/portfolio/Prathamesh_Software_Engineer_5_3.pdf",
+    resumeUrl: "/portfolio/Prathamesh_Software_Engineer.pdf",
     yearsExperience: "5.3 Years",
     about: [
       {
@@ -36,6 +36,14 @@ export const portfolioData = {
       {
         title: "Project Management",
         text: "I consistently use Jira for comprehensive work tracking and detailed reporting to keep projects organized and efficient."
+      },
+      {
+        title: "CI/CD & GitHub Actions",
+        text: "Experienced in setting up GitHub Actions workflows for automated builds, testing, and release pipelines across mobile projects."
+      },
+      {
+        title: "App Analytics & Monitoring",
+        text: "Integrated Sentry for crash reporting and error monitoring, and Amplitude for event tracking and user behavior analytics in production apps."
       }
     ]
   },
@@ -79,6 +87,7 @@ export const portfolioData = {
       description: [
         "Employee health benefits platform for doctor consultations, lab tests, pharmacy, and wellness.",
         "Claim Offline Reimbursement, Cashless Vision, and Dental cashless flows.",
+        "GitHub Actions CI/CD for automated builds, testing, and release pipelines.",
         "Currently live on both iOS and Android."
       ],
       links: {
@@ -94,6 +103,7 @@ export const portfolioData = {
       description: [
         "Doctor-facing app to connect with patients, manage appointments, and schedule follow-ups.",
         "Video/voice consultations, patient messaging, and QR-based patient onboarding.",
+        "GitHub Actions CI/CD workflows for streamlined app delivery.",
         "Currently live on both iOS and Android."
       ],
       links: {
@@ -109,6 +119,7 @@ export const portfolioData = {
       description: [
         "Free app helping athletes stay safe from doping by checking medicines against the WADA prohibited list.",
         "Scans medicines and ingredients for banned substances.",
+        "GitHub Actions CI/CD and Amplitude event tracking for user analytics.",
         "Currently live on both iOS and Android."
       ],
       links: {
@@ -153,6 +164,7 @@ export const portfolioData = {
       description: [
         "Flutter mobile app for insurance policy management, claims tracking, and agent communication.",
         "View insurance ID cards, make payments, report claims, and access roadside assistance.",
+        "GitHub Actions CI/CD, Sentry crash monitoring, and Amplitude event tracking.",
         "Currently live on both iOS and Android."
       ],
       links: {
@@ -236,10 +248,12 @@ export const portfolioData = {
     }
   ],
   skills: {
-    frontend: ["React-Native", "Redux", "TypeScript", "Flutter", "IOS"],
+    frontend: ["React-Native", "Redux", "Redux Toolkit", "TypeScript", "Flutter", "IOS"],
     plugins: ["Visit-Webview-dart", "Helth-Dashboard-Swift-sdk"],
-    languages: ["Java", "JavaScript", "swift", "DSA", "OOP"],
-    tools: ["JIRA WorkFlow", "Git/Github", "VisualBasic", "Eclipse", "Android Studio", "Xcode"]
+    languages: ["Java", "JavaScript", "Swift", "Dart", "DSA", "OOP"],
+    devOps: ["GitHub Actions", "CI/CD", "Git/Github"],
+    analytics: ["Sentry", "Amplitude"],
+    tools: ["JIRA WorkFlow", "VisualBasic", "Eclipse", "Android Studio", "Xcode"]
   },
   education: [
     {
