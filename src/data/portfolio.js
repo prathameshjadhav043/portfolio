@@ -132,6 +132,35 @@ export const portfolioData = {
       }
     },
     {
+      title: "Scread: Social Media",
+      tech: "ios, swift, swiftui, storyboard",
+      tag: "Live",
+      tagVariant: "live",
+      description: [
+        "Native iOS social media application built with Swift, SwiftUI, and Storyboard.",
+        "Improved app performance and stability while adding new features and functionalities.",
+        "Currently live on the App Store."
+      ],
+      links: {
+        appstore: "https://apps.apple.com/au/app/screade/id1553733434"
+      }
+    },
+    {
+      title: "Farm Bureau Financial Services (FBFS Mobile)",
+      tech: "flutter, ios, android",
+      tag: "Live",
+      tagVariant: "live",
+      description: [
+        "Flutter mobile app for insurance policy management, claims tracking, and agent communication.",
+        "View insurance ID cards, make payments, report claims, and access roadside assistance.",
+        "Currently live on both iOS and Android."
+      ],
+      links: {
+        appstore: "https://apps.apple.com/us/app/farm-bureau-financial-services/id1454047628",
+        playstore: "https://play.google.com/store/apps/details?id=com.fbfs.mobile"
+      }
+    },
+    {
       title: "Alautun Provider",
       tech: "react native, ios, android",
       tag: "Legacy · US",
@@ -181,17 +210,6 @@ export const portfolioData = {
         "Unified logistics super app for shippers, brokers, and carriers across the US and Canada.",
         "Post pickup locations, equipment types, and find broker/carrier matches.",
         "US-hosted application; store listing may no longer be active."
-      ]
-    },
-    {
-      title: "FBINS Mobile App",
-      tech: "react native, ios, android",
-      tag: "Legacy · US",
-      tagVariant: "legacy",
-      description: [
-        "Retail e-commerce mobile application for Fortune Brands Innovations (FBIN).",
-        "Consumer-facing shopping experience for connected home and retail products.",
-        "US-hosted on US servers; application may have been discontinued."
       ]
     },
     {
