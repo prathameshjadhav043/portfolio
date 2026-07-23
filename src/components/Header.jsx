@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { trackEvent } from '../lib/analytics';
 import './Header.css';
 
 const Header = () => {
@@ -27,7 +28,12 @@ const Header = () => {
                         <ul className="nav__links">
                             {['About', 'Experience', 'Skills', 'Projects', 'Education', 'Feedback', 'Contact'].map((item) => (
                                 <li key={item}>
-                                    <a href={`#${item.toLowerCase()}`}>{item}</a>
+                                    <a
+                                        href={`#${item.toLowerCase()}`}
+                                        onClick={() => trackEvent('nav_click', { section: item.toLowerCase() })}
+                                    >
+                                        {item}
+                                    </a>
                                 </li>
                             ))}
                         </ul>

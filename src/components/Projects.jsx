@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react';
 import { portfolioData } from '../data/portfolio';
 import Reveal from './Reveal';
 import { motion, AnimatePresence } from 'framer-motion';
+import { trackEvent } from '../lib/analytics';
 import './Projects.css';
 
 const FILTERS = [
@@ -50,7 +51,10 @@ const Projects = () => {
                             role="tab"
                             aria-selected={activeFilter === id}
                             className={`projects__filter-btn ${activeFilter === id ? 'projects__filter-btn--active' : ''}`}
-                            onClick={() => setActiveFilter(id)}
+                            onClick={() => {
+                                setActiveFilter(id);
+                                trackEvent('project_filter', { filter: id });
+                            }}
                         >
                             {label}
                         </button>
@@ -91,16 +95,48 @@ const Projects = () => {
                                         </ul>
                                         <div className="project__links">
                                             {project.links?.playstore && (
-                                                <a href={project.links.playstore} target="_blank" rel="noopener noreferrer" className="btn-link">Play Store</a>
+                                                <a
+                                                    href={project.links.playstore}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="btn-link"
+                                                    onClick={() => trackEvent('project_link_click', { project: project.title, link: 'playstore' })}
+                                                >
+                                                    Play Store
+                                                </a>
                                             )}
                                             {project.links?.appstore && (
-                                                <a href={project.links.appstore} target="_blank" rel="noopener noreferrer" className="btn-link">App Store</a>
+                                                <a
+                                                    href={project.links.appstore}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="btn-link"
+                                                    onClick={() => trackEvent('project_link_click', { project: project.title, link: 'appstore' })}
+                                                >
+                                                    App Store
+                                                </a>
                                             )}
                                             {project.links?.devpost && (
-                                                <a href={project.links.devpost} target="_blank" rel="noopener noreferrer" className="btn-link">Devpost</a>
+                                                <a
+                                                    href={project.links.devpost}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="btn-link"
+                                                    onClick={() => trackEvent('project_link_click', { project: project.title, link: 'devpost' })}
+                                                >
+                                                    Devpost
+                                                </a>
                                             )}
                                             {project.links?.github && (
-                                                <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="btn-link">GitHub</a>
+                                                <a
+                                                    href={project.links.github}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="btn-link"
+                                                    onClick={() => trackEvent('project_link_click', { project: project.title, link: 'github' })}
+                                                >
+                                                    GitHub
+                                                </a>
                                             )}
                                         </div>
                                     </div>

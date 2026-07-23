@@ -1,6 +1,7 @@
 import { FaEnvelope, FaLinkedin, FaGithub, FaPhone } from 'react-icons/fa';
 import { portfolioData } from '../data/portfolio';
 import Reveal from './Reveal';
+import { trackEvent } from '../lib/analytics';
 import './Contact.css';
 
 const Contact = () => {
@@ -17,7 +18,13 @@ const Contact = () => {
                             Whether you have a question or just want to say hi, my inbox is always open!
                         </p>
 
-                        <a href={`mailto:${email}`} className="btn btn-primary contact__btn">Say Hello</a>
+                        <a
+                            href={`mailto:${email}`}
+                            className="btn btn-primary contact__btn"
+                            onClick={() => trackEvent('contact_click', { type: 'email' })}
+                        >
+                            Say Hello
+                        </a>
 
                         <div className="contact__details">
                             <div className="contact__item">
@@ -32,8 +39,22 @@ const Contact = () => {
                         </div>
 
                         <div className="social__links">
-                            <a href={linkedin} target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-                            <a href={github} target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+                            <a
+                                href={linkedin}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={() => trackEvent('contact_click', { type: 'linkedin' })}
+                            >
+                                <FaLinkedin />
+                            </a>
+                            <a
+                                href={github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={() => trackEvent('contact_click', { type: 'github' })}
+                            >
+                                <FaGithub />
+                            </a>
                         </div>
                     </div>
                 </Reveal>

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import './Hero.css';
 import { portfolioData } from '../data/portfolio';
+import { trackEvent } from '../lib/analytics';
 
 const Hero = () => {
     const { name, role } = portfolioData.personalInfo;
@@ -47,8 +48,20 @@ const Hero = () => {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.8 }}
                     >
-                        <a href="#projects" className="btn btn-primary">View Work</a>
-                        <a href="#contact" className="btn btn-glass">Contact Me</a>
+                        <a
+                            href="#projects"
+                            className="btn btn-primary"
+                            onClick={() => trackEvent('cta_click', { label: 'view_work' })}
+                        >
+                            View Work
+                        </a>
+                        <a
+                            href="#contact"
+                            className="btn btn-glass"
+                            onClick={() => trackEvent('cta_click', { label: 'contact_me' })}
+                        >
+                            Contact Me
+                        </a>
                     </motion.div>
                 </motion.div>
             </div>

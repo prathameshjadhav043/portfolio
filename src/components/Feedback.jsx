@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Reveal from './Reveal';
 import { FaStar } from 'react-icons/fa';
+import { trackEvent } from '../lib/analytics';
 import './Feedback.css';
 
 const Feedback = () => {
@@ -10,6 +11,7 @@ const Feedback = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        trackEvent('feedback_submit', { rating });
         setSubmitted(true);
         setTimeout(() => setSubmitted(false), 3000); // Reset after 3 seconds for demo
     };
